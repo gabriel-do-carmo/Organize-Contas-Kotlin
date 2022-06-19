@@ -1,12 +1,18 @@
 package com.gdsdesenvolvimento.organizecontas.ui.view
 
-import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
-import com.gdsdesenvolvimento.organizecontas.R
+import android.view.View
+import androidx.lifecycle.ViewModel
+import com.gdsdesenvolvimento.organizecontas.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+class MainActivity : BaseActivity<ActivityMainBinding>() {
+    override fun getMyViewBinding(): ActivityMainBinding = ActivityMainBinding.inflate(layoutInflater)
+    override fun getMyViewModel(): ViewModel? {
+        return null
     }
+    override fun getLayoutView(): View = binding.root
+
+    override fun codeInject() {
+
+    }
+
 }
