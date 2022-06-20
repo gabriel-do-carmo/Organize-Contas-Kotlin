@@ -21,7 +21,9 @@ abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity(){
     }
 
     abstract fun getMyViewBinding(): VB
-    abstract fun getMyViewModel(): ViewModel?
+    open fun getMyViewModel(): ViewModel? {
+        return null
+    }
     abstract fun getLayoutView(): View
     abstract fun codeInject()
 
